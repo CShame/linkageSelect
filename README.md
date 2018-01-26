@@ -1,7 +1,7 @@
-﻿
+
 # linkageSelect
 
-####语言：angularjs
+#### 语言：angularjs
 
 #### 功能： 
 三级联动选择框
@@ -59,4 +59,4 @@ $scope.options ={
         };
 ```
 #### 效果图
-![](https://github.com/CShame/linkageSelect/blob/master/linkageSelect/1.png"效果图")
+![](https://github.com/CShame/linkageSelect/raw/master/1.png"效果图")
