@@ -59,4 +59,4 @@ $scope.options ={
         };
 ```
 #### 效果图
-![](https://github.com/CShame/linkageSelect/raw/master/1.png"效果图")
+![](https://github.com/CShame/linkageSelect/raw/master/1.png "效果图")
