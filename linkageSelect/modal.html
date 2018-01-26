@@ -1,0 +1,43 @@
+<ion-modal-view class="linkage-select-modal">
+  <div class="linkage-select">
+    <div class="select-title text-center">{{options.title}}</div>
+    <div class="row level-scroll">
+      <div class="picker-above-highlight"></div>
+      <div class="col-33 each-scroll">
+        <div class="selected-style"></div>
+        <ion-scroll on-scroll='scrollingEvent("levelOne")' delegate-handle="{{'levelOneScroll_' + globalId}}">
+          <ul>
+            <li ng-class="{'selected':one.selected == true}" ng-repeat="one in levelOneList track by $index" ng-click="selectEvent('levelOne',$index)">
+              {{one[options.levelOneAttr]}}
+            </li>
+          </ul>
+        </ion-scroll>
+      </div>
+      <div class="col-34 mid-scroll each-scroll">
+        <div class="selected-style"></div>
+        <ion-scroll on-scroll='scrollingEvent("levelTwo")' delegate-handle="{{'levelTwoScroll_' + globalId}}">
+          <ul>
+            <li ng-class="{'selected':two.selected == true}" ng-repeat="two in levelTwoList track by $index" ng-click="selectEvent('levelTwo',$index)">
+              {{two[options.levelTwoAttr]}}
+            </li>
+          </ul>
+        </ion-scroll>
+      </div>
+      <div class="col-33 each-scroll">
+        <div class="selected-style"></div>
+        <ion-scroll on-scroll='scrollingEvent("levelThree")' delegate-handle="{{'levelThreeScroll_' + globalId}}">
+          <ul>
+            <li ng-class="{'selected':three.selected == true}" ng-repeat="three in levelThreeList track by $index" ng-click="selectEvent('levelThree',$index)">
+              {{three[options.levelThreeAttr]}}
+            </li>
+          </ul>
+        </ion-scroll>
+      </div>
+      <div class="picker-below-highlight"></div>
+    </div>
+    <div class="row bottom-button text-center">
+      <div class="col-50" ng-click="cancelModal()">取消</div>
+      <div class="col-50" ng-click="submitValue()">确定</div>
+    </div>
+  </div>
+</ion-modal-view>
